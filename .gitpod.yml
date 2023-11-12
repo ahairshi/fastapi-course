@@ -1,11 +1,15 @@
 tasks:
   - name: Dash
     before: |
-      python -m venv env   #create a virtual environment
-      .\env\Scripts\activate  #activate your virtual environment
-      cd .\backend\
-      pip install -r .\requirements.txt
-      uvicorn main:app --reload     #start server
+      pyenv versions
+      "yes" | pyenv install 3.11
+      pyenv global 3.11
+      pyenv version
+      python -V
+      pyenv which pip 
+      pip install --upgrade pip
+      python -m venv env
+      
 
 
 vscode:
