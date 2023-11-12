@@ -1,0 +1,17 @@
+tasks:
+  - name: Dash
+    before: |
+      cd .\JobBoard-Fastapi\
+      python -m venv env   #create a virtual environment
+      .\env\Scripts\activate  #activate your virtual environment
+      cd .\backend\
+      pip install -r .\requirements.txt
+      uvicorn main:app --reload     #start server
+
+
+vscode:
+  extensions:
+    - phil294.git-log--graph
+    - mhutchie.git-graph
+    - phil294.git-log--graph
+    - almenon.arepl
