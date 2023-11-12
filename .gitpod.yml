@@ -6,9 +6,13 @@ tasks:
       pyenv global 3.11
       pyenv version
       python -V
-      pyenv which pip 
-      pip install --upgrade pip
+      pyenv which pip
       python -m venv env
+      source ./env/bin/activate
+      cd backend/
+      pip install --upgrade pip
+      pip install -r requirements.txt
+      uvicorn main:app --reload
       
 
 
